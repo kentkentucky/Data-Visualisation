@@ -29,7 +29,6 @@ function Gallery() {
       
     menuItem.mouseOver(function(e)
     {
-        
         var el = select('#' + e.srcElement.id);
         el.addClass("hover");
     })

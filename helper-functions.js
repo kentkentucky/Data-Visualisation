@@ -60,7 +60,14 @@ function drawAxis(layout, colour=0) {
 }
 
 function drawAxisLabels(xLabel, yLabel, layout) {
-  fill(0);
+  if(darkmode == false)
+  {
+      fill(0);
+  }
+  else if(darkmode == true)
+  {
+      fill(255);
+  }
   noStroke();
   textAlign('center', 'center');
 
@@ -84,7 +91,14 @@ function drawYAxisTickLabels(min, max, layout, mapFunction,
   var range = max - min;
   var yTickStep = range / layout.numYTickLabels;
 
-  fill(0);
+  if(darkmode == false)
+  {
+      fill(0);
+  }
+  else if(darkmode == true)
+  {
+      fill(255);
+  }
   noStroke();
   textAlign('right', 'center');
 
@@ -110,7 +124,14 @@ function drawXAxisTickLabel(value, layout, mapFunction) {
   // Map function must be passed with .bind(this).
   var x = mapFunction(value);
 
-  fill(0);
+  if(darkmode == false)
+  {
+      fill(0);
+  }
+  else if(darkmode == true)
+  {
+      fill(255);
+  }
   noStroke();
   textAlign('center', 'center');
 

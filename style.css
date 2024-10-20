@@ -15,9 +15,9 @@ body{
 }
 
 .hover {
-    background: lightgray
+    background: lightgray;
 }
 
 .selected{
-    background: gold
+    background: gold;
 }

@@ -46,7 +46,7 @@ function TechDiversityRace() {
   };
 
   // Create a new pie chart object.
-  this.pie = new PieChart(width / 2, height / 2, width * 0.4);
+  this.pie = new PieChart(width / 2, height / 2, width * 0.4, width * 0.25);
 
   this.draw = function() {
     if (!this.loaded) {
@@ -75,5 +75,6 @@ function TechDiversityRace() {
 
     // Draw the pie chart!
     this.pie.draw(col, labels, colours, title);
+    this.pie.mouseOver(col, colours);
   };
 }

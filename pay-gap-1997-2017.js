@@ -122,7 +122,14 @@ function PayGapTimeSeries() {
       if (previous != null) {
         // Draw line segment connecting previous year to current
         // year pay gap.
-        stroke(0);
+        if(darkmode == false)
+        {
+            stroke(0);
+        }
+        else if(darkmode == true)
+        {
+            stroke(0, 255, 0);
+        }
         line(this.mapYearToWidth(previous.year),
              this.mapPayGapToHeight(previous.payGap),
              this.mapYearToWidth(current.year),
@@ -146,12 +153,20 @@ function PayGapTimeSeries() {
     }
   };
 
-  this.drawTitle = function() {
-    fill(0);
-    noStroke();
-    textAlign('center', 'center');
+  this.drawTitle = function() 
+  {
+      if(darkmode == false)
+      {
+          fill(0);
+      }
+      else if(darkmode == true)
+      {
+          fill(255);
+      }
+      noStroke();
+      textAlign('center', 'center');
 
-    text(this.title,
+      text(this.title,
          (this.layout.plotWidth() / 2) + this.layout.leftMargin,
          this.layout.topMargin - (this.layout.marginSize / 2));
   };

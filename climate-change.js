@@ -170,7 +170,14 @@ function ClimateChange() {
 
         // Draw line segment connecting previous year to current
         // year temperature.
-        stroke(0);
+        if(darkmode == false)
+        {
+            stroke(0);
+        }
+        else if(darkmode == true)
+        {
+            stroke(255);
+        }
         line(this.mapYearToWidth(previous.year),
              this.mapTemperatureToHeight(previous.temperature),
              this.mapYearToWidth(current.year),
